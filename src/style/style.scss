@@ -1,0 +1,83 @@
+@import "variables.scss";
+
+* {
+  font-family: "Arial";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 616px;
+  min-height: 100vh;
+}
+
+.toggleBtn {
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  width: 100px;
+  height: 28px;
+  border: 1px solid $orange300;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+}
+
+label:after {
+  content: attr(data-off);
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  font-weight: 400;
+  font-size: 10px;
+  color: #7c5a5b;
+  transition: 0.3s;
+}
+
+label:before {
+  content: attr(data-on);
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-weight: 400;
+  font-size: 10px;
+  padding: 3px;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+  background: $orange300;
+  border-radius: 9px;
+}
+
+input:checked + label:after {
+  background: $orange300;
+  padding: 3px;
+  color: #ffffff;
+  transition: 0.3s;
+  background: $orange300;
+  border-radius: 9px;
+  top: 4px;
+  left: 6px;
+}
+
+input:checked + label:before {
+  content: attr(data-on);
+  padding: 3px;
+  color: $orange300;
+  transition: 0.3s;
+  background: #ffffff;
+  border-radius: 9px;
+  top: 4px;
+  left: 52px;
+}

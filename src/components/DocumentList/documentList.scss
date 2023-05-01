@@ -1,0 +1,47 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  max-width: 616px;
+  padding: 16px;
+  align-items: center;
+  &__wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-grow: 2;
+    flex-basis: calc(100% - 120px);
+    min-width: 200px;
+    &-text {
+      width: calc(100% - 60px);
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #414141;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: #6b6b6b;
+  }
+  &__button-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 120px;
+    > button {
+      width: 100%;
+    }
+
+  }
+}
